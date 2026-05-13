@@ -2,7 +2,7 @@
 
 int main() {
     unsigned long int populacao, populacao2;
-    int turismo, turismo2, escolha;
+    int turismo, turismo2, escolha, escolha2;
     float area, area2, densidade, densidade2;
     float pib, pib2, percapita, percapita2;
     float trunfo, trunfo2;
@@ -69,45 +69,9 @@ int main() {
 
     printf("Comparação entre as cartas: \n");
 
-    printf("Carta 1:\n");
-printf("Nome: %s", nome);
-printf("Letra: %c\n", letra);
-printf("Área: %.2f Km²\n ", area);
-printf("Pontos turísticos: %d\n", turismo);
-printf("População: %lu\n", populacao);
-printf("Densidade Populacional: %.2f Hab/km²\n", densidade);
-printf("PIB: %.2f Trilhões de reais\n", pib);
-printf("PIB per capita: %.2f\n", percapita);
-printf("Código: %s\n", codigo);
-
-printf("Carta 2:\n");
-printf("Nome: %s", nome2);
-printf("Letra: %c\n", letra2);
-printf("Área: %.2f Km²\n", area2);
-printf("Pontos turísticos: %d\n", turismo2);
-printf("População: %lu\n", populacao2);
-printf("Densidade Populacional: %.2f Hab/km²\n", densidade2);
-printf("PIB: %.2f Trilhões de reais\n", pib2);
-printf("PIB per capita: %.2f Reais\n", percapita2);
-printf("Código: %s\n", codigo2);
-
-    //Declaração de vencedor:
-        printf("O vencedor é: \n");
-    trunfo = (area + turismo + densidade + pib + percapita) / 5;
-    trunfo2 = (area2 + turismo2 + densidade2 + pib2 + percapita2) / 5;
-    
-
-    populacao > populacao2 ? printf("População: %s venceu!\n", nome) : printf("População: %s venceu!\n", nome2);
-    area > area2 ? printf("Área: %s venceu!\n", nome) : printf("Área: %s venceu!\n", nome2);
-    turismo > turismo2 ? printf("Turismo: %s venceu!\n", nome) : printf("Turismo: %s venceu!\n", nome2);
-    densidade < densidade2 ? printf("Densidade: %s venceu!\n", nome) : printf("Densidade: %s venceu!\n", nome2);
-    pib > pib2 ? printf("PIB: %s venceu!\n", nome) : printf("PIB: %s venceu!\n", nome2);
-    percapita > percapita2 ? printf("PIB per capita: %s venceu!\n", nome) : printf("PIB per capita: %s venceu!\n", nome2);
-    trunfo > trunfo2 ? printf("Super Poder: %s venceu!\n", nome) : printf("Super Poder: %s venceu!\n", nome2);
-
     //Seleção de atributo a ser comparado:
 
-    printf("Selecione o atributo a ser comparado: \n");
+    printf("Selecione o primeiro atributo:\n");
     printf("1 - População\n");
     printf("2 - Área\n");
     printf("3 - Pontos turísticos\n");
@@ -116,6 +80,29 @@ printf("Código: %s\n", codigo2);
     printf("6 - PIB per capita\n");
     printf("7 - Super Poder\n");
     scanf("%d", &escolha);
+
+    printf("\nSelecione o segundo atributo:\n");
+    if (escolha != 1)
+    printf("1 - População\n");
+
+    if (escolha != 2)
+    printf("2 - Área\n");
+
+    if (escolha != 3)
+    printf("3 - Pontos turísticos\n");
+
+    if (escolha != 4)
+    printf("4 - Densidade populacional\n");
+
+    if (escolha != 5)
+    printf("5 - PIB\n");
+
+    if (escolha != 6)
+    printf("6 - PIB per capita\n");
+
+    if (escolha != 7)
+    printf("7 - Super Poder\n");
+    scanf("%d", &escolha2);
 
     switch (escolha) {
         case 1:
@@ -174,7 +161,46 @@ printf("Código: %s\n", codigo2);
             printf("Opção inválida! \n");
             break;    
     }
+
+    //Exibição dos atributos restantes de cada carta:
+    printf("Atributos gerais das cartas: \n");
+
+    printf("Carta 1:\n");
+printf("Nome: %s", nome);
+printf("Letra: %c\n", letra);
+printf("Área: %.2f Km²\n ", area);
+printf("Pontos turísticos: %d\n", turismo);
+printf("População: %lu\n", populacao);
+printf("Densidade Populacional: %.2f Hab/km²\n", densidade);
+printf("PIB: %.2f Trilhões de reais\n", pib);
+printf("PIB per capita: %.2f\n", percapita);
+printf("Código: %s\n", codigo);
+
+printf("Carta 2:\n");
+printf("Nome: %s", nome2);
+printf("Letra: %c\n", letra2);
+printf("Área: %.2f Km²\n", area2);
+printf("Pontos turísticos: %d\n", turismo2);
+printf("População: %lu\n", populacao2);
+printf("Densidade Populacional: %.2f Hab/km²\n", densidade2);
+printf("PIB: %.2f Trilhões de reais\n", pib2);
+printf("PIB per capita: %.2f Reais\n", percapita2);
+printf("Código: %s\n", codigo2);
+
+    //Declaração de vencedor:
+        printf("O vencedor é: \n");
+    trunfo = (area + turismo + densidade + pib + percapita) / 5;
+    trunfo2 = (area2 + turismo2 + densidade2 + pib2 + percapita2) / 5;
     
+
+    populacao > populacao2 ? printf("População: %s venceu!\n", nome) : printf("População: %s venceu!\n", nome2);
+    area > area2 ? printf("Área: %s venceu!\n", nome) : printf("Área: %s venceu!\n", nome2);
+    turismo > turismo2 ? printf("Turismo: %s venceu!\n", nome) : printf("Turismo: %s venceu!\n", nome2);
+    densidade < densidade2 ? printf("Densidade: %s venceu!\n", nome) : printf("Densidade: %s venceu!\n", nome2);
+    pib > pib2 ? printf("PIB: %s venceu!\n", nome) : printf("PIB: %s venceu!\n", nome2);
+    percapita > percapita2 ? printf("PIB per capita: %s venceu!\n", nome) : printf("PIB per capita: %s venceu!\n", nome2);
+    trunfo > trunfo2 ? printf("Super Poder: %s venceu!\n", nome) : printf("Super Poder: %s venceu!\n", nome2);
+
 
     return 0;
 }
