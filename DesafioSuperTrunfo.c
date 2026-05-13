@@ -33,7 +33,7 @@ int main() {
     scanf("%f", &pib);
     percapita = pib / populacao;
 
-    printf("Código do país: \n    ");
+    printf("Código do país: \n");
     scanf("%s", codigo);
 
     densidade = populacao / area;
@@ -69,7 +69,7 @@ int main() {
 
     printf("Comparação entre as cartas: \n");
 
-    //Seleção de atributo a ser comparado:
+    //Seleção de atributos a serem comparados:
 
     printf("Selecione o primeiro atributo:\n");
     printf("1 - População\n");
@@ -81,7 +81,7 @@ int main() {
     printf("7 - Super Poder\n");
     scanf("%d", &escolha);
 
-    printf("\nSelecione o segundo atributo:\n");
+    printf("Selecione o segundo atributo:\n");
     if (escolha != 1)
     printf("1 - População\n");
 
